@@ -1,0 +1,82 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/*내부 페이지 스크롤 시 부드럽게 위아래 이동*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*전체 글꼴 "Noto Sans KR"적용,마진 0px*/
+body{
+font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0px;
+}
+
+/*상단 메뉴 : ul > li > a 구조*/
+nav{
+    position: sticky;
+    top: 0;
+    background-color: #222;
+}
+nav ul{
+list-style: none;/*목록 점 없애기*/
+margin: 0px;
+padding: 0px;
+display: flex;/*가로 메뉴에 주로 사용*/
+}
+nav li{}
+nav a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;/*밑줄 없애기*/
+}
+nav a:hover{
+    background:#ff9800 ;
+}
+
+
+/*링크의 4가지 상태(순서:L-V-H-A)*/
+.content a:link{
+color: blue;
+}/*클릭전 보여지는 색*/
+.content a:visited{
+    color: purple;
+}/*클릭 후 보여지는 색*/
+.content a:hover{
+    color: red;
+    text-decoration: underline wavy;
+}/*hover-마우스를 가지고 갔을때 보여지는 것*/
+.content a:active{
+    color: orange;
+}/*클릭 시 보여지는 색*/
+
+/*버튼 모양 링크*/
+a.btn{
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #1976d2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+a.btn:hover{
+    background: #0d47a1;
+}
+
+/*색션공통*/
+section{
+    min-height: 500px;
+    padding: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+/*선택된 섹션을 배경색 적용하여 도드라지게 보이기*/
+section:target{
+background: #fff8e1;
+}
+
